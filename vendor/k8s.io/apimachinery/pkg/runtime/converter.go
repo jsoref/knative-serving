@@ -534,7 +534,7 @@ func mapToUnstructured(sv, dv reflect.Value) error {
 		if st.Key().Kind() == reflect.String {
 			switch st.Elem().Kind() {
 			// TODO It should be possible to reuse the slice for primitive types.
-			// However, it is panicing in the following form.
+			// However, it is panicking in the following form.
 			// case reflect.String, reflect.Bool,
 			// 	reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64,
 			// 	reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64:
@@ -592,7 +592,7 @@ func sliceToUnstructured(sv, dv reflect.Value) error {
 	if dt.Kind() == reflect.Interface && dv.NumMethod() == 0 {
 		switch st.Elem().Kind() {
 		// TODO It should be possible to reuse the slice for primitive types.
-		// However, it is panicing in the following form.
+		// However, it is panicking in the following form.
 		// case reflect.String, reflect.Bool,
 		// 	reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64,
 		// 	reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64:

@@ -1,0 +1,20 @@
+# Google Docs
+/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
+# GitHub SHAs
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+# githubusercontent
+/[a-z-]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
+# slack
+[/.]slack\.com/[0-9a-zA-Z/_.-]+
+# sha
+sha256:[0-9a-f]+
+# URL escaped characters
+\%[0-9A-F]{2}
+#
+tls\.(?:crt|key): [a-zA-Z=;,/0-9+-]+
+checksum: "[0-9a-f]+"
+NET_ISTIO_COMMIT=[0-9a-f]+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#|\%23)[0-9a-fA-FgGrR]{2,}[uU]?[lL]{0,2}\b
+#
+k8s

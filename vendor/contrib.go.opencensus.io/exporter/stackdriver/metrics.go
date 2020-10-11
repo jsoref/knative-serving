@@ -328,11 +328,11 @@ func metricDescriptorTypeToMetricKind(m *metricdata.Metric) (googlemetricpb.Metr
 		return googlemetricpb.MetricDescriptor_GAUGE, googlemetricpb.MetricDescriptor_DISTRIBUTION
 
 	case metricdata.TypeSummary:
-		// TODO: [rghetia] after upgrading to proto version3, retrun UNRECOGNIZED instead of UNSPECIFIED
+		// TODO: [rghetia] after upgrading to proto version3, return UNRECOGNIZED instead of UNSPECIFIED
 		return googlemetricpb.MetricDescriptor_METRIC_KIND_UNSPECIFIED, googlemetricpb.MetricDescriptor_VALUE_TYPE_UNSPECIFIED
 
 	default:
-		// TODO: [rghetia] after upgrading to proto version3, retrun UNRECOGNIZED instead of UNSPECIFIED
+		// TODO: [rghetia] after upgrading to proto version3, return UNRECOGNIZED instead of UNSPECIFIED
 		return googlemetricpb.MetricDescriptor_METRIC_KIND_UNSPECIFIED, googlemetricpb.MetricDescriptor_VALUE_TYPE_UNSPECIFIED
 	}
 }
